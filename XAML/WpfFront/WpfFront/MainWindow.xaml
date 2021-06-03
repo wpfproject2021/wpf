@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfFront"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600" WindowStyle="None">
+        mc:Ignorable="d" ResizeMode="NoResize"
+        Title="MainWindow" Height="450" Width="380" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Background="Transparent" AllowsTransparency="True">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#B879D4" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#5256B7" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            
+        </Grid>
     </Grid>
 </Window>
