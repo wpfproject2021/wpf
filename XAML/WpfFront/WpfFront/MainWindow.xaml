@@ -7,7 +7,8 @@
         mc:Ignorable="d" ResizeMode="NoResize"
         Title="MainWindow" Height="450" Width="380" 
         WindowStyle="None" WindowStartupLocation="CenterScreen"
-        Background="Transparent" AllowsTransparency="True">
+        Background="Transparent" AllowsTransparency="True"
+        MouseDown="MainWindow_OnMouseDown">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -23,7 +24,49 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            
+
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="images/books.png" Width="80" Margin="150,0"/>
+                <TextBlock Text="Library Management" FontWeight="Light"
+                         FontFamily="helvetica" FontSize="22"
+                           Foreground="White" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox FontFamily="Helvetica" FontWeight="Light"
+                         Text="Username" FontSize="20"
+                         HorizontalAlignment="Left" Background="Transparent"
+                         Foreground="White" BorderThickness="0"
+                         Width="235" Opacity=".5"
+                         HorizontalContentAlignment="Left"
+                         Margin="65 10 10 0" Height="30"/>
+                </StackPanel>
+                <Border Width="250" Height="2"
+                    Background="White"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <PasswordBox FontFamily="Helvetica" FontWeight="Light"
+                         Password="Password" FontSize="20"
+                         HorizontalAlignment="Left" Background="Transparent"
+                         Foreground="White" BorderThickness="0"
+                         Width="235" Opacity=".5"
+                         HorizontalContentAlignment="Left"
+                         Margin="65 10 10 0" Height="30"/>
+                </StackPanel>
+                <Border Width="250" Height="2"
+                    Background="White"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Button Width="100" Height="40" 
+                        Content="LOGIN" Margin="60,40,0,0"/>
+                <Button Width="100" Height="40" 
+                        Content="REGISTER" Margin="50,40,0,0"/>
+            </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

@@ -13,3 +13,5 @@ D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.GenerateResource.
 D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.CoreCompileInputs.cache
 D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.exe
 D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.pdb
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\Button.baml
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\App.baml
