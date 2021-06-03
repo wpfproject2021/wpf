@@ -1,0 +1,15 @@
+D:\Github\wpf\XAML\WpfFront\WpfFront\bin\Debug\WpfFront.exe.config
+D:\Github\wpf\XAML\WpfFront\WpfFront\bin\Debug\WpfFront.exe
+D:\Github\wpf\XAML\WpfFront\WpfFront\bin\Debug\WpfFront.pdb
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csprojAssemblyReference.cache
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\MainWindow.g.cs
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\App.g.cs
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront_MarkupCompile.cache
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront_MarkupCompile.lref
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\MainWindow.baml
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.g.resources
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.Properties.Resources.resources
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.GenerateResource.cache
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.CoreCompileInputs.cache
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.exe
+D:\Github\wpf\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.pdb
