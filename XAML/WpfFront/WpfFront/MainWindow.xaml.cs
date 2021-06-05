@@ -29,5 +29,10 @@ namespace WpfFront
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
