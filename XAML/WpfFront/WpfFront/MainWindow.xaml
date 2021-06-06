@@ -40,14 +40,13 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Margin="200,0,0,0">
-                <Image Source="images/close.png"  
+                <Image Source="close.png"  
                     Width="40"
-                    Height="40">
-                </Image>
+                    Height="40" IsManipulationEnabled="True"/>
             </Button>
 
             <StackPanel VerticalAlignment="Center">
-                <Image Source="/images/books.png" Width="80" Margin="150,0"/>
+                <Image Source="books.png" Width="80" Margin="150,0"/>
                 <TextBlock Text="Library Management" FontWeight="Light"
                          FontFamily="helvetica" FontSize="22"
                          Foreground="White" HorizontalAlignment="Center"/>
