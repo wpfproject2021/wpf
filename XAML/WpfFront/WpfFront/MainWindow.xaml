@@ -85,9 +85,11 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <Button x:Name="login" Width="100" Height="40" 
-                        Content="LOGIN" Margin="60,40,0,0"/>
+                        Content="LOGIN" Margin="60,40,0,0"
+                        Click="login_Click"/>
                 <Button x:Name="register" Width="100" Height="40" 
-                        Content="REGISTER" Margin="50,40,0,0"/>
+                        Content="REGISTER" Margin="50,40,0,0"
+                        Click="register_Click"/>
             </StackPanel>
 
         </Grid>
