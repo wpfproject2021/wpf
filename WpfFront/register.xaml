@@ -103,24 +103,25 @@
                          Foreground="White" BorderThickness="0"
                          Width="235" Opacity=".5"
                          HorizontalContentAlignment="Left"
-                         Margin="40,10,10,0" Height="30"
+                         Margin="35,10,10,0" Height="30"
                          Padding="10,0"/>
                     </StackPanel>
                 </StackPanel>
                 <!--borders-->
-                <Border Width="150" Height="2"
-                    Background="White" Margin="0,0,290,0"/>
-                <Border Width="150" Height="2"
-                    Background="White" Margin="600,0,0,0"/>
+                <Border Width="200" Height="2"
+                    Background="White" Margin="0,0,250,0"/>
+                <Border Width="200" Height="2"
+                    Background="White" Margin="630,0,0,0"/>
 
-                <!--username-->
-                <StackPanel Orientation="Horizontal" 
+                <StackPanel Orientation="Horizontal">
+                    <!--username-->
+                    <StackPanel Orientation="Horizontal" 
                             Margin="0,50,0,0">
-                    <TextBlock Margin="75,15,0,1" Foreground="White"
+                        <TextBlock Margin="75,15,0,1" Foreground="White"
                         FontSize="22">
                         Username
-                    </TextBlock>
-                    <TextBox x:Name="username" 
+                        </TextBlock>
+                        <TextBox x:Name="username" 
                          FontFamily="Helvetica" FontWeight="Light"
                          Text="Username" FontSize="20"
                          HorizontalAlignment="Left" Background="Transparent"
@@ -129,9 +130,30 @@
                          HorizontalContentAlignment="Left"
                          Margin="40,10,10,0" Height="30"
                          Padding="10,0"/>
+                    </StackPanel>
+
+                    <!--phone number-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="35,70,0,0" Foreground="White"
+                        FontSize="22">
+                        Phone Number
+                        </TextBlock>
+                        <TextBox x:Name="phoneNumber" 
+                         FontFamily="Helvetica" FontWeight="Light"
+                         Text="Phone Number" FontSize="20"
+                         HorizontalAlignment="Left" Background="Transparent"
+                         Foreground="White" BorderThickness="0"
+                         Width="205" Opacity=".5"
+                         HorizontalContentAlignment="Left"
+                         Margin="40,10,10,0" Height="41"
+                         Padding="0"/>
+                    </StackPanel>
                 </StackPanel>
-                <Border Width="150" Height="2"
-                    Background="White" Margin="0,0,300,0"/>
+
+                <Border Width="200" Height="2"
+                    Background="White" Margin="0,0,250,0"/>
+                <Border Width="200" Height="2"
+                    Background="White" Margin="630,0,0,0"/>
 
                 <StackPanel Orientation="Horizontal" 
                             Margin="0,50,0,0">
@@ -155,7 +177,7 @@
 
                     <!--repeat pass-->
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="55,15,0,1" Foreground="White"
+                        <TextBlock Margin="35,15,0,1" Foreground="White"
                         FontSize="22">
                         Repeat Password
                         </TextBlock>
@@ -171,9 +193,9 @@
                          Padding="10,0"/>
                     </StackPanel>
                 </StackPanel>
-                <Border Width="150" Height="2"
-                    Background="White" Margin="0,0,300,0"/>
-                <Border Width="150" Height="2"
+                <Border Width="200" Height="2"
+                    Background="White" Margin="0,0,250,0"/>
+                <Border Width="200" Height="2"
                     Background="White" Margin="650,0,0,0"/>
             </StackPanel>
 

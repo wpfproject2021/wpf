@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WpfFront
 {
@@ -31,13 +35,47 @@ namespace WpfFront
             Window win = (Window)this.Parent;
             win.Close();
         }
-        private void register_Click(object sender, RoutedEventArgs e)
-        {
 
+        //a method to check wether the password input are identical
+        private bool pass_Valid(string passOne, string passTwo)
+        {
+            if (passOne == passTwo && 8 <= passOne.Length && 8 <= passTwo.Length) return true;
+            if (passOne.Length < 8)
+            {
+                MessageBox.Show("Your password is less than 8 characters.");
+                return false;
+            }
+            else
+            {
+                MessageBox.Show("Passwords Do Not Match!");
+                return false;
+            }
         }
+
+        //checks if the username is an email in correct format
+        private bool user_Valid(string user)
+        {
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(user);
+
+            if (!match.Success)
+            {
+                MessageBox.Show("Email format is incorrect");
+                return true;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void signUp_Click(object sender, RoutedEventArgs e)
         {
-
+            string passOne = password.Password;
+            string passTwo = password2.Password;
+            string user = username.Text;
+            pass_Valid(passOne,passTwo);
+            user_Valid(user);
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
@@ -45,5 +83,31 @@ namespace WpfFront
             MainWindow m = new MainWindow();
             //this.Content = m;
         }
+
+    }
+
+    //a class for library members that is connected to sql
+    public class member
+    {
+        string _firstName;
+        string _lastName;
+        string _userName;
+        string _password;
+        string _phone;
+        string _photoPath;
+
+        public member(string firstName, string lastName, string username,
+                        string pass, string path, string phoneNum)
+        {
+            this._firstName = firstName;
+            this._lastName = lastName;
+            this._userName = username;
+            this._password = pass;
+            this._photoPath = path;
+            this._phone = phoneNum;
+        }
+        SqlConnection con = new SqlConnection(
+            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+        
     }
 }

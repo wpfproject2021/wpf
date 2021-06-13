@@ -69,7 +69,6 @@ namespace WpfFront
             string userName = username.Text;
             string pass = password.Password;
             valid(userName, pass);
-
         }
     }
 }
