@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\bin\Debug\formboss.exe.config
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\bin\Debug\formboss.exe
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\bin\Debug\formboss.pdb
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.csprojAssemblyReference.cache
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\App.g.cs
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss_MarkupCompile.cache
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss_MarkupCompile.lref
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.g.resources
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.Properties.Resources.resources
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.csproj.GenerateResource.cache
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.exe
+C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\formboss.pdb
