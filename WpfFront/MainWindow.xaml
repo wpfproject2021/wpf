@@ -56,7 +56,8 @@
             <StackPanel Grid.Row="1">
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="username" 
+                    <TextBox x:Name="username"
+                         GotFocus="TextBox_GotFocus"
                          FontFamily="Helvetica" FontWeight="Light"
                          Text="Username" FontSize="20"
                          HorizontalAlignment="Center" Background="Transparent"
@@ -69,7 +70,7 @@
                     Background="White"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox x:Name="password" 
+                    <PasswordBox x:Name="password"
                          FontFamily="Helvetica" 
                          FontWeight="Light"
                          Password="Password" FontSize="20"

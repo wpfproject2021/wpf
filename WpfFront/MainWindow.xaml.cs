@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using Microsoft.Data.SqlClient;
 
 namespace WpfFront
 {
@@ -69,6 +72,40 @@ namespace WpfFront
             string userName = username.Text;
             string pass = password.Password;
             valid(userName, pass);
+
+            //connecting to database
+            //why doesn't it work?
+            bool flag = false;
+            SqlConnection con = new SqlConnection(
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from [member]";
+            cmd.Connection = con;
+
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                if (rd[3].ToString() == username.Text)
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == false)
+            {
+                MessageBox.Show("User Not Found!");
+            }
+            con.Close();
+        }
+
+
+        //to remove the placeholder text after clicking
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
         }
     }
 }

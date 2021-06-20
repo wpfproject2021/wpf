@@ -15,7 +15,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-//using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 
 namespace WpfFront
@@ -91,6 +90,14 @@ namespace WpfFront
         {
             MainWindow m = new MainWindow();
             //this.Content = m;
+        }
+
+        //to remove the placeholder text after clicking
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
         }
 
     }

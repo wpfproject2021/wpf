@@ -78,15 +78,16 @@
                         FontSize="22">
                         First Name
                         </TextBlock>
-                        <TextBox x:Name="firstName" 
-                         FontFamily="Helvetica" FontWeight="Light"
-                         Text="First Name" FontSize="20"
-                         HorizontalAlignment="Left" Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="235" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="40,10,10,0" Height="30"
-                         Padding="10,0"/>
+                        <TextBox x:Name="firstName"
+                             GotFocus="TextBox_GotFocus"
+                             FontFamily="Helvetica" FontWeight="Light"
+                             Text="First Name" FontSize="20"
+                             HorizontalAlignment="Left" Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="235" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="40,10,10,0" Height="30"
+                             Padding="10,0"/>
                     </StackPanel>
 
                     <!--Last Name-->
@@ -95,16 +96,17 @@
                         FontSize="22">
                         Last Name
                         </TextBlock>
-                        <TextBox x:Name="lastName" 
-                         FontFamily="Helvetica" FontWeight="Light"
-                         Text="Last Name" FontSize="20"
-                         HorizontalAlignment="Left" 
-                         Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="235" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="35,10,10,0" Height="30"
-                         Padding="10,0"/>
+                        <TextBox x:Name="lastName"
+                             GotFocus="TextBox_GotFocus"
+                             FontFamily="Helvetica" FontWeight="Light"
+                             Text="Last Name" FontSize="20"
+                             HorizontalAlignment="Left" 
+                             Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="235" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="35,10,10,0" Height="30"
+                             Padding="10,0"/>
                     </StackPanel>
                 </StackPanel>
                 <!--borders-->
@@ -122,14 +124,15 @@
                         Username
                         </TextBlock>
                         <TextBox x:Name="username" 
-                         FontFamily="Helvetica" FontWeight="Light"
-                         Text="Username" FontSize="20"
-                         HorizontalAlignment="Left" Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="235" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="40,10,10,0" Height="30"
-                         Padding="10,0"/>
+                             GotFocus="TextBox_GotFocus"
+                             FontFamily="Helvetica" FontWeight="Light"
+                             Text="Username" FontSize="20"
+                             HorizontalAlignment="Left" Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="235" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="40,10,10,0" Height="30"
+                             Padding="10,0"/>
                     </StackPanel>
 
                     <!--phone number-->
@@ -139,14 +142,15 @@
                         Phone Number
                         </TextBlock>
                         <TextBox x:Name="phoneNumber" 
-                         FontFamily="Helvetica" FontWeight="Light"
-                         Text="Phone Number" FontSize="20"
-                         HorizontalAlignment="Left" Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="205" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="40,10,10,0" Height="41"
-                         Padding="0"/>
+                             GotFocus="TextBox_GotFocus"
+                             FontFamily="Helvetica" FontWeight="Light"
+                             Text="Phone Number" FontSize="20"
+                             HorizontalAlignment="Left" Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="205" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="40,10,10,0" Height="41"
+                             Padding="0"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -164,15 +168,15 @@
                         Password
                         </TextBlock>
                         <PasswordBox x:Name="password" 
-                         FontFamily="Helvetica" 
-                         FontWeight="Light"
-                         Password="Password" FontSize="20"
-                         HorizontalAlignment="Left" Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="235" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="45,10,10,0" Height="30"
-                         Padding="10,0"/>
+                             FontFamily="Helvetica" 
+                             FontWeight="Light"
+                             Password="Password" FontSize="20"
+                             HorizontalAlignment="Left" Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="235" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="45,10,10,0" Height="30"
+                             Padding="10,0"/>
                     </StackPanel>
 
                     <!--repeat pass-->
@@ -181,16 +185,16 @@
                         FontSize="22">
                         Repeat Password
                         </TextBlock>
-                        <PasswordBox x:Name="password2" 
-                         FontFamily="Helvetica" 
-                         FontWeight="Light"
-                         Password="Password" FontSize="20"
-                         HorizontalAlignment="Left" Background="Transparent"
-                         Foreground="White" BorderThickness="0"
-                         Width="235" Opacity=".5"
-                         HorizontalContentAlignment="Left"
-                         Margin="10,10,10,0" Height="30"
-                         Padding="10,0"/>
+                        <PasswordBox x:Name="password2"
+                             FontFamily="Helvetica" 
+                             FontWeight="Light"
+                             Password="Password" FontSize="20"
+                             HorizontalAlignment="Left" Background="Transparent"
+                             Foreground="White" BorderThickness="0"
+                             Width="235" Opacity=".5"
+                             HorizontalContentAlignment="Left"
+                             Margin="10,10,10,0" Height="30"
+                             Padding="10,0"/>
                     </StackPanel>
                 </StackPanel>
                 <Border Width="200" Height="2"
