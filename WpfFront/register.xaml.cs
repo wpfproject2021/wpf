@@ -15,7 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace WpfFront
 {
@@ -71,11 +72,19 @@ namespace WpfFront
 
         private void signUp_Click(object sender, RoutedEventArgs e)
         {
+            string first = firstName.Text;
+            string last = lastName.Text;
+            string phone = phoneNumber.Text;
             string passOne = password.Password;
             string passTwo = password2.Password;
             string user = username.Text;
-            pass_Valid(passOne,passTwo);
-            user_Valid(user);
+            bool passValid = pass_Valid(passOne,passTwo);
+            bool userValid = user_Valid(user);
+            if (passValid && userValid)
+            {
+                //creating an instance of the member class
+                member m = new member(first, last, user, passOne, null, phone);
+            }
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
@@ -105,9 +114,20 @@ namespace WpfFront
             this._password = pass;
             this._photoPath = path;
             this._phone = phoneNum;
+
+            SqlConnection con = new SqlConnection(
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+
+            con.Open();
+            string command;
+            command = "insert into member values('"+ _firstName + "', '" + _lastName + "', '"+ _userName.Trim() +"', " +
+                "'"+ _phone.Trim() +"', '"+ _password.Trim() +"', '"+ _photoPath +"')";
+            SqlCommand com = new SqlCommand(command, con);
+            com.BeginExecuteNonQuery();
+            con.Close();
         }
-        SqlConnection con = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
-        
+
+
+
     }
 }
