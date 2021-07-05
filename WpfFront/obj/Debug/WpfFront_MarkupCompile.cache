@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\obj\Debug\
+D:\Github\wpf\WpfFront\obj\Debug\
 WpfFront
 none
 false
 DEBUG;TRACE
-D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\App.xaml
+D:\Github\wpf\WpfFront\App.xaml
 4-1166223121
 
 71137931773
-55702423071
+55791637841
 Button.xaml;FirstPage.xaml;MainWindow.xaml;register.xaml;
 
 False
