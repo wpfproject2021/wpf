@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\Github\wpf\formboss\formboss\obj\Debug\
+=======
+C:\Users\user\Desktop\FatemehUni\Gitpro\wpf\formboss\formboss\obj\Debug\
+>>>>>>> baaff70819603ada78fbf93cb2749cff331ca7e1
 formboss
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\Github\wpf\formboss\formboss\App.xaml
 62001163089
 
 13945489689
 562035665494
+=======
+C:\Users\user\Desktop\FatemehUni\Gitpro\wpf\formboss\formboss\App.xaml
+62001163089
+
+13945489689
+562147329848
+>>>>>>> baaff70819603ada78fbf93cb2749cff331ca7e1
 addB.xaml;AddEmployee.xaml;balanceA.xaml;delemp.xaml;delete.xaml;MainWindow.xaml;
 
 True
