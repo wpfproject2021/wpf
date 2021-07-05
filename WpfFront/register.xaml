@@ -118,22 +118,22 @@
                     Background="White" Margin="630,0,0,0"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <!--username-->
+                    <!--email-->
                     <StackPanel Orientation="Horizontal" 
                             Margin="0,50,0,0">
                         <TextBlock Margin="75,15,0,1" Foreground="White"
                         FontSize="22">
-                        Username
+                        Email
                         </TextBlock>
                         <TextBox x:Name="username" 
                              GotFocus="TextBox_GotFocus"
                              FontFamily="Helvetica" FontWeight="Light"
-                             Text="Username" FontSize="20"
+                             Text="Email" FontSize="20"
                              HorizontalAlignment="Left" Background="Transparent"
                              Foreground="White" BorderThickness="0"
                              Width="235" Opacity=".5"
                              HorizontalContentAlignment="Left"
-                             Margin="40,10,10,0" Height="30"
+                             Margin="90,10,5,0" Height="30"
                              Padding="10,0"/>
                     </StackPanel>
 
@@ -151,7 +151,7 @@
                              Foreground="White" BorderThickness="0"
                              Width="205" Opacity=".5"
                              HorizontalContentAlignment="Left"
-                             Margin="20,50,10,-25" Height="41"
+                             Margin="30,50,10,-25" Height="41"
                              Padding="0"/>
                     </StackPanel>
                 </StackPanel>
@@ -182,8 +182,8 @@
                     </StackPanel>
 
                     <!--repeat pass-->
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="35,15,0,1" Foreground="White"
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <TextBlock Margin="25,15,0,1" Foreground="White"
                         FontSize="22">
                         Repeat Password
                         </TextBlock>
@@ -195,7 +195,7 @@
                              Foreground="White" BorderThickness="0"
                              Width="235" Opacity=".5"
                              HorizontalContentAlignment="Left"
-                             Margin="10,10,10,0" Height="30"
+                             Margin="20,10,10,0" Height="30"
                              Padding="10,0"/>
                     </StackPanel>
                 </StackPanel>

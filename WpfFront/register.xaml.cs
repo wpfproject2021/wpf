@@ -13,6 +13,9 @@ namespace WpfFront
     /// </summary>
     public partial class register : Page
     {
+        //to save the photo path
+
+        string path;
         public register()
         {
             InitializeComponent();
@@ -71,7 +74,8 @@ namespace WpfFront
             if (passValid && userValid)
             {
                 //creating an instance of the member class
-                member m = new member(first, last, user, passOne, null, phone);
+                member m = new member(first, last, user, passOne, path, phone);
+                MessageBox.Show("Successfully Signed Up!");
             }
         }
 
@@ -100,7 +104,11 @@ namespace WpfFront
             {
                 profile.Source = new BitmapImage(new Uri(op.FileName));
             }
+
+            //save the image address to path var
+            path = op.FileName;
         }
+
     }
 
     //a class for library members that is connected to sql
