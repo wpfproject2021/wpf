@@ -13,12 +13,12 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2.6*"/>
                 <RowDefinition Height="2.5*"/>
                 <RowDefinition Height="2.5*"/>
                 <RowDefinition Height="1.5*"/>
             </Grid.RowDefinitions>
-            
+
             <Border CornerRadius="11" Grid.RowSpan="5">
                 <Border.Background>
                     <LinearGradientBrush>
@@ -26,6 +26,7 @@
                         <GradientStop Color="#5256B7" Offset="1"></GradientStop>
                     </LinearGradientBrush>
                 </Border.Background>
+                <Image/>
             </Border>
 
             <StackPanel Grid.Row="0">
@@ -46,8 +47,16 @@
 
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="0">
-                <Image x:Name="image" Source="employe.png" 
-                         Width="80" Margin="0,-100,0,-200"/>
+                <Image x:Name="image" Source="employe.png" Margin="205,-100,220,-200" RenderTransformOrigin="0.5,0.5" Height="164">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.011"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
                 <TextBlock x:Name="title3" Text="AddEmployee"
                          FontFamily="helvetica" FontSize="30"
                          Foreground="White" HorizontalAlignment="Center" Margin="0,80,0,-10"/>
@@ -59,7 +68,7 @@
                          Foreground="White" HorizontalAlignment="Left" Margin="15,30,0,150"/>
 
             </StackPanel>
-            
+
             <StackPanel  Grid.Row="2" VerticalAlignment="Center"  Margin="0">
                 <TextBox x:Name="nameemployee2" Margin="15,-5,40,60"  />
             </StackPanel>
@@ -78,7 +87,7 @@
             <StackPanel  Grid.Row="3" VerticalAlignment="Center"  Margin="0">
                 <TextBlock x:Name="phone" Text="Phone"
                          FontFamily="helvetica" FontSize="15"
-                         Foreground="White" HorizontalAlignment="Left" Margin="15,5,0,150"/>
+                         Foreground="White" HorizontalAlignment="Left" Margin="15,15,0,150"/>
 
             </StackPanel>
 
@@ -98,15 +107,24 @@
             </StackPanel>
 
             <StackPanel  Grid.Row="4" VerticalAlignment="Center"  Margin="0">
-                <Button x:Name="register" Content="Register" Margin="20,-5,20,10" Height="40" Width="300" Foreground="White"  >
+                <Button x:Name="register" Content="Register" Margin="20,-5,20,10" Height="40" Width="300" Foreground="White" Click="register_Click"  >
                     <Button.Background>
                         <ImageBrush ImageSource="button1.png"/>
                     </Button.Background>
                 </Button>
             </StackPanel>
 
-
+            <StackPanel Grid.Row="1" VerticalAlignment="Center"  Margin="0" >
+                <Button x:Name="upload" Content="Upload" Margin="210,100,210,10" Height="40" Width="80" Foreground="White" Click="upload_Click" RenderTransformOrigin="0.562,0.583"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="button1.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center"  Margin="0" >
+                <Image x:Name="picture"  Margin="220,-240,220,-200" RenderTransformOrigin="0.5,0.5" Height="184"/>
+            </StackPanel>
 
         </Grid>
-        </Grid>
+    </Grid>
 </Window>

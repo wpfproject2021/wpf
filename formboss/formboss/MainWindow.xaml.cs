@@ -57,5 +57,11 @@ namespace formboss
             AddEmployee u3 = new AddEmployee();
             u3.Show();
         }
+
+        private void deleteemployee_Click(object sender, RoutedEventArgs e)
+        {
+            delemp m = new delemp();
+            m.Show();
+        }
     }
 }

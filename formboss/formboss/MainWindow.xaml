@@ -11,7 +11,7 @@
         Background="#bf00ff"
         
         >
-    
+
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -40,13 +40,13 @@
                     <Button.Background>
                         <ImageBrush x:Name="close" ImageSource="Close.png"/>
                     </Button.Background>
-                <Image Source="close.png"  
+                    <Image Source="close.png"  
                     Width="40"
                     Height="40" IsManipulationEnabled="True"/>
-            </Button>
-                </StackPanel>
+                </Button>
+            </StackPanel>
 
-                    <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="0">
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="0">
                 <Image x:Name="image" Source="admin.png" 
                          Width="80" Margin="0,-100,0,-200"/>
                 <TextBlock x:Name="title" Text="Admin"
@@ -60,7 +60,7 @@
                          Foreground="White" HorizontalAlignment="Center" Margin="0,100,0,150"/>
             </StackPanel>
 
-            
+
 
 
             <StackPanel  Grid.Row="2" VerticalAlignment="Center"  Margin="0">
@@ -75,7 +75,7 @@
                          Foreground="White" HorizontalAlignment="Center" Margin="0,100,0,150"/>
             </StackPanel>
 
-           
+
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">
 
@@ -105,12 +105,22 @@
                     <Button.Background>
                         <ImageBrush ImageSource="button1.png"/>
                     </Button.Background>
-                    </Button>
+                </Button>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Grid.Row="2">
-                <Button x:Name="settleemployee" Width="100" Height="80" 
-                        Content="SETTLE" Margin="500,60,0,0"
+                <Button x:Name="settleemployee" Width="100" Height="40" 
+                        Content="SETTLE" Margin="500,10,0,0"
+                       Foreground="White"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="button1.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <Button x:Name="showemployee" Width="100" Height="40" 
+                        Content="SHOW" Margin="500,100,0,0"
                        Foreground="White"  >
                     <Button.Background>
                         <ImageBrush ImageSource="button1.png"/>
@@ -129,9 +139,9 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Grid.Row="2">
-                <Button x:Name="deleteemployee" Width="100" Height="40" 
-                        Content="DELETE" Margin="200,0,0,-120"
-                       Foreground="White" >
+                <Button x:Name="deleteemployee" Width="100" 
+                        Content="DELETE" Margin="200,119,0,-1"
+                       Foreground="White" Click="deleteemployee_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="button1.png"/>
                     </Button.Background>

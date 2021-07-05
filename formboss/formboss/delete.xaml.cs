@@ -36,56 +36,66 @@ namespace formboss
 
         private void deleteb_Click(object sender, RoutedEventArgs e)
         {
-            //hame ketaha dar sql ra dar yek list zakhre kardam
-
-            List<Book> a = new List<Book>();
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\FatemehUni\projectWPF\db\book.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            string command;            
-            command = "select * from bookinfo";
-            SqlDataAdapter adapter = new SqlDataAdapter(command,con);
-            DataTable data = new DataTable();
-            adapter.Fill(data);
-            for(int i=0;i<data.Rows.Count;i++)
-            {               
-                Book z = new Book(data.Rows[i][0].ToString(),
-                    data.Rows[i][1].ToString(), Convert.ToInt32(data.Rows[i][2]), Convert.ToBoolean(data.Rows[i][3]));
-                a.Add(z);
-            }
-            SqlCommand com = new SqlCommand(command, con);
-           // com.BeginExecuteNonQuery();
-           // con.Close();
-            ////////////
-            bool k = false;
-            for(int i=0;i<a.Count;i++)
+            if (namebook2.Text == string.Empty || writer2.Text == String.Empty)
             {
-                if((namebook2.Text==a[i].name) && writer2.Text==a[i].writer)
+                MessageBox.Show("field ha ra vared kon");
+            }
+            //hame ketaha dar sql ra dar yek list zakhre kardam
+            else
+            {
+                List<Book> a = new List<Book>();
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\FatemehUni\projectWPF\db\book.mdf;Integrated Security=True;Connect Timeout=30");
+                con.Open();
+                string command;
+                command = "select * from bookinfo";
+                SqlDataAdapter adapter = new SqlDataAdapter(command, con);
+                DataTable data = new DataTable();
+                adapter.Fill(data);
+                for (int i = 0; i < data.Rows.Count; i++)
                 {
-                    ///hazf ketab
+                    Book z = new Book(data.Rows[i][0].ToString(),
+                    data.Rows[i][1].ToString(), Convert.ToInt32(data.Rows[i][2]), Convert.ToBoolean(data.Rows[i][3]));
+                    a.Add(z);
+                }
+                SqlCommand com = new SqlCommand(command, con);
+                com.ExecuteNonQuery();
+                con.Close();
+                ////////////
+                bool k = false;
+                for (int i = 0; i < a.Count; i++)
+                {
+                    if ((namebook2.Text == a[i].name.ToString()) && writer2.Text == a[i].writer.ToString())
+                    {
+                        ///hazf ketab
 
-                    k = true;
-                    //SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\FatemehUni\projectWPF\db\book.mdf;Integrated Security=True;Connect Timeout=30");
-                    //con1.Open();
-                    string command1;
-                    command1= "delete from bookinfo where name='" + a[i].name.Trim() + "'";
+                        k = true;
+                        SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\FatemehUni\projectWPF\db\book.mdf;Integrated Security=True;Connect Timeout=30");
+                        con1.Open();
+                        string command1;
 
-                    SqlCommand com1 = new SqlCommand(command1, con);
-                    com1.BeginExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("hazf shod");
+                        command1 = "delete from bookinfo where name='" + a[i].name.ToString() + "'";
+                        a.Remove(a[i]);
+                        SqlCommand com1 = new SqlCommand(command1, con1);
+
+                        com1.ExecuteNonQuery();
+                        con1.Close();
+                        //con.Close();
+                        MessageBox.Show("hazf shod");
+
+                        namebook2.Text = String.Empty;
+                        writer2.Text = String.Empty;
+
+                        break;
+                    }
+                }
+                if (k == false)
+                {
+                    MessageBox.Show("chenin ketabi vojood nadarad");
                     namebook2.Text = String.Empty;
                     writer2.Text = String.Empty;
-                    
-                    break;
                 }
+
             }
-            if(k==false)
-            {
-                MessageBox.Show("chenin ketabi vojood nadarad");
-                namebook2.Text = String.Empty;
-                writer2.Text = String.Empty;
-            }
-            
         }
         public class Book
         {
