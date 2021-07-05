@@ -1,21 +1,10 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Data;
 using Microsoft.Data.SqlClient;
+using Microsoft.Win32;
 
 namespace WpfFront
 {
@@ -89,8 +78,7 @@ namespace WpfFront
         private void login_Click(object sender, RoutedEventArgs e)
         {
             MainWindow m = new MainWindow();
-            //why doesn't it work?
-            //this.Content = m;
+            m.Show();
         }
 
         //to remove the placeholder text after clicking
@@ -101,6 +89,18 @@ namespace WpfFront
             tb.GotFocus -= TextBox_GotFocus;
         }
 
+        private void Upload_Btn(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                profile.Source = new BitmapImage(new Uri(op.FileName));
+            }
+        }
     }
 
     //a class for library members that is connected to sql
