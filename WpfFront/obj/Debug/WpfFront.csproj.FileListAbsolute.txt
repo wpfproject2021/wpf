@@ -114,3 +114,5 @@ D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\bin\Debug\zh-Hant\Microsoft.Data.Sq
 D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.AssemblyReference.cache
 D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\obj\Debug\WpfFront.csproj.CopyComplete
 D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\bin\Debug\System.Data.SqlClient.dll
+D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\obj\Debug\FirstPage.g.cs
+D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\obj\Debug\FirstPage.baml

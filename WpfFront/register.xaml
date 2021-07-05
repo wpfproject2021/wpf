@@ -149,7 +149,7 @@
                              Foreground="White" BorderThickness="0"
                              Width="205" Opacity=".5"
                              HorizontalContentAlignment="Left"
-                             Margin="40,10,10,0" Height="41"
+                             Margin="20,50,10,-25" Height="41"
                              Padding="0"/>
                     </StackPanel>
                 </StackPanel>

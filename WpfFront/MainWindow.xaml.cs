@@ -71,32 +71,11 @@ namespace WpfFront
             //first checks if the password and username are in valid format
             string userName = username.Text;
             string pass = password.Password;
+
             valid(userName, pass);
+            //checks if the user exists
+            user_Exists(userName, pass);
 
-            //connecting to database
-            //why doesn't it work?
-            bool flag = false;
-            SqlConnection con = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from [member]";
-            cmd.Connection = con;
-
-            SqlDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
-            {
-                if (rd[3].ToString() == username.Text)
-                {
-                    flag = true;
-                    break;
-                }
-            }
-            if (flag == false)
-            {
-                MessageBox.Show("User Not Found!");
-            }
-            con.Close();
         }
 
 
@@ -106,6 +85,44 @@ namespace WpfFront
             TextBox tb = (TextBox)sender;
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
+        }
+
+
+        //search for a username in database
+        public bool user_Exists(string username, string pass)
+        {
+            bool exists = false;
+
+            SqlConnection c = 
+                new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+            c.Open();
+            string command;
+            command = "select * from member";
+            SqlDataAdapter adapter = new SqlDataAdapter(command,c);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                if ((string)data.Rows[i][2] == username && (string)data.Rows[i][4] == pass)
+                {
+                    exists = true;
+                }
+            }
+            SqlCommand cmd = new SqlCommand(command, c);
+            cmd.BeginExecuteNonQuery();
+            c.Close();
+
+            //check the value of exist variable
+            if (exists)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong Email Or Password!");
+                return false;
+            }
         }
     }
 }

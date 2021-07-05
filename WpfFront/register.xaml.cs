@@ -89,6 +89,7 @@ namespace WpfFront
         private void login_Click(object sender, RoutedEventArgs e)
         {
             MainWindow m = new MainWindow();
+            //why doesn't it work?
             //this.Content = m;
         }
 

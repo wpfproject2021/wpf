@@ -59,7 +59,7 @@
                     <TextBox x:Name="username"
                          GotFocus="TextBox_GotFocus"
                          FontFamily="Helvetica" FontWeight="Light"
-                         Text="Username" FontSize="20"
+                         Text="Email" FontSize="20"
                          HorizontalAlignment="Center" Background="Transparent"
                          Foreground="White" BorderThickness="0"
                          Width="235" Opacity=".5"
