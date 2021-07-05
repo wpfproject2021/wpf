@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\obj\Debug\
+D:\Github\wpf\formboss\formboss\obj\Debug\
 formboss
 none
 false
 DEBUG;TRACE
-C:\Users\user\Desktop\FatemehUni\projectWPF\formboss\formboss\App.xaml
+D:\Github\wpf\formboss\formboss\App.xaml
 62001163089
 
-121787849056
-561046919923
+13945489689
+562035665494
 addB.xaml;AddEmployee.xaml;balanceA.xaml;delemp.xaml;delete.xaml;MainWindow.xaml;
 
-False
+True
 
