@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Data.SqlClient;
 using Microsoft.Win32;
@@ -15,7 +16,7 @@ namespace WpfFront
     {
         //to save the photo path
 
-        string path;
+        ImageSource path;
         public register()
         {
             InitializeComponent();
@@ -106,7 +107,7 @@ namespace WpfFront
             }
 
             //save the image address to path var
-            path = op.FileName;
+            path = profile.Source;
         }
 
     }
@@ -119,10 +120,10 @@ namespace WpfFront
         string _userName;
         string _password;
         string _phone;
-        string _photoPath;
+        ImageSource _photoPath;
 
         public member(string firstName, string lastName, string username,
-                        string pass, string path, string phoneNum)
+                        string pass, ImageSource path, string phoneNum)
         {
             this._firstName = firstName;
             this._lastName = lastName;
