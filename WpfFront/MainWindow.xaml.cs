@@ -24,6 +24,9 @@ namespace WpfFront
     /// </summary>
     public partial class MainWindow : Window
     {
+        //to save the user status
+        string stat;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -74,7 +77,23 @@ namespace WpfFront
 
             valid(userName, pass);
             //checks if the user exists
-            user_Exists(userName, pass);
+            bool exists = user_Exists(userName, pass);
+            //checks the type of user: Admin, employee or member
+            if (exists)
+            {
+                if (userName.ToLower() == "admin" && pass == "AdminLib123")
+                {
+                    //go to admin page
+                }
+                if (stat.ToLower() == "member")
+                {
+
+                }
+                else
+                {
+                    //go to employees' page
+                }
+            }
 
         }
 
@@ -107,6 +126,8 @@ namespace WpfFront
                 if ((string)data.Rows[i][2] == username && (string)data.Rows[i][4] == pass)
                 {
                     exists = true;
+                    //saves the status of the user
+                    stat = (string)data.Rows[i][6];
                 }
             }
             SqlCommand cmd = new SqlCommand(command, c);

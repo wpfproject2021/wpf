@@ -53,8 +53,16 @@
                          FontFamily="helvetica" FontSize="30"
                          Foreground="White" HorizontalAlignment="Center" Margin="0,-50,0,4"/>
             </StackPanel>
-
-            <StackPanel Grid.Row="1" Margin="0,-100,0,0">
+            
+            <StackPanel Grid.Row="1" Margin="0,-150,0,0">
+                <!--drop down menu-->
+                <StackPanel Margin="500,10,10,10" Width="120">
+                    <ComboBox Name="stat" Margin="-4,0,0,0">
+                        <ComboBoxItem>Employee</ComboBoxItem>
+                        <ComboBoxItem IsSelected="True">Memeber</ComboBoxItem>
+                        <ComboBoxItem>Admin</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
                 <!--picture-->
                 <StackPanel Margin="20,-50,0,20" Orientation="Horizontal">
                     <Button Margin="50,0,20,0"

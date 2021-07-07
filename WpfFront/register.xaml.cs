@@ -70,12 +70,13 @@ namespace WpfFront
             string passOne = password.Password;
             string passTwo = password2.Password;
             string user = username.Text;
+            string status = stat.Text;
             bool passValid = pass_Valid(passOne,passTwo);
             bool userValid = user_Valid(user);
             if (passValid && userValid)
             {
                 //creating an instance of the member class
-                member m = new member(first, last, user, passOne, path, phone);
+                member m = new member(first, last, user, passOne, path, phone, status);
                 MessageBox.Show("Successfully Signed Up!");
             }
         }
@@ -121,9 +122,10 @@ namespace WpfFront
         string _password;
         string _phone;
         ImageSource _photoPath;
+        string _status;
 
         public member(string firstName, string lastName, string username,
-                        string pass, ImageSource path, string phoneNum)
+                        string pass, ImageSource path, string phoneNum, string status)
         {
             this._firstName = firstName;
             this._lastName = lastName;
@@ -131,6 +133,7 @@ namespace WpfFront
             this._password = pass;
             this._photoPath = path;
             this._phone = phoneNum;
+            this._status = status;
 
             SqlConnection con = new SqlConnection(
                 @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
@@ -138,7 +141,7 @@ namespace WpfFront
             con.Open();
             string command;
             command = "insert into member values('"+ _firstName + "', '" + _lastName + "', '"+ _userName.Trim() +"', " +
-                "'"+ _phone.Trim() +"', '"+ _password.Trim() +"', '"+ _photoPath +"')";
+                "'"+ _phone.Trim() +"', '"+ _password.Trim() +"', '"+ _photoPath +"', '"+_status+"')";
             SqlCommand com = new SqlCommand(command, con);
             com.BeginExecuteNonQuery();
             con.Close();
