@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WpfApp.Views.EditInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="900">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#B879D4" Offset="0.0"></GradientStop>
+                    <GradientStop Color="#5256B7" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+    </Grid>
+</UserControl>
