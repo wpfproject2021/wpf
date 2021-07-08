@@ -55,10 +55,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addB.xaml.cs">
+      <DependentUpon>addB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployee.xaml.cs">
+      <DependentUpon>AddEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="balanceA.xaml.cs">
+      <DependentUpon>balanceA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="delemp.xaml.cs">
+      <DependentUpon>delemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="delete.xaml.cs">
+      <DependentUpon>delete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="register.xaml.cs">
       <DependentUpon>register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="settleem.xaml.cs">
+      <DependentUpon>settleem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showbook.xaml.cs">
+      <DependentUpon>showbook.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="balanceA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="delemp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="delete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,6 +123,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="settleem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showbook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,6 +172,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="delete-book-11-959107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="employe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pay1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="increase-icon-png-19.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

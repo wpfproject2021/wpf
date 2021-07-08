@@ -135,14 +135,15 @@ namespace WpfApp
             this._phone = phoneNum;
 
             SqlConnection con = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
 
             con.Open();
             string command;
+            double f = 0;
             command = "insert into member values('" + _firstName + "', '" + _lastName + "', '" + _userName.Trim() + "', " +
-                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "')";
+                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','"+ f+"')";
             SqlCommand com = new SqlCommand(command, con);
-            com.BeginExecuteNonQuery();
+            com.ExecuteNonQuery();
             con.Close();
         }
     }

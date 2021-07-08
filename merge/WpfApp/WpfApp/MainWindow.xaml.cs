@@ -23,6 +23,7 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
+          
         }
         private void MainWindow_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -64,6 +65,13 @@ namespace WpfApp
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
+            
+            if (username.Text == "admin@yahoo.com" && password.Password == "AdminLib123")
+            {
+                Admin v = new Admin();
+                v.Show();
+            }
+
             //saves the status of the user
             string stat = status.Text;
             //first checks if the password and username are in valid format
@@ -76,10 +84,7 @@ namespace WpfApp
             //checks the type of user: Admin, employee or member
             if (exists)
             {
-                if (userName.ToLower() == "admin" && pass == "AdminLib123")
-                {
-                    //go to admin page
-                }
+                
                 if (stat.ToLower() == "member")
                 {
                     //go to member
@@ -107,7 +112,7 @@ namespace WpfApp
             bool exists = false;
 
             SqlConnection c =
-                new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\XAML\WpfFront\WpfFront\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             c.Open();
             string command;
             command = "select * from member";
