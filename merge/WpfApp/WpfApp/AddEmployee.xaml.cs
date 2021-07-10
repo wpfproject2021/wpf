@@ -50,7 +50,10 @@ namespace WpfApp
             if (result == true)
             {
                 string x = upload1.FileName;
+               // MessageBox.Show(x);
+
                 picture.Source = new BitmapImage(new Uri(x));
+               
             }
         }
 
@@ -93,12 +96,14 @@ namespace WpfApp
                     string phone = phoneemployee2.Text;
                     string lastname = familyemployee2.Text;
                     double balance = 0;
-                    ImageSource pic = picture.Source;
-
+                    
+                    Image p = picture;
+                    
+                   // MessageBox.Show(x);
                     SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
                     con.Open();
                     string command;
-                    command = "insert into EmployeeInfo values('" +email.Trim() + "','" + name.Trim() + "','" + lastname.Trim() + "','" + password.Trim() + "','" + phone.Trim() + "','" +balance + "','" + picture + "')";
+                    command = "insert into EmployeeInfo values('" +email.Trim() + "','" + name.Trim() + "','" + lastname.Trim() + "','" + password.Trim() + "','" + phone.Trim() + "','" +balance + "','" + p.Source + "')";
                     SqlCommand com = new SqlCommand(command, con);
                     com.ExecuteNonQuery();
                     con.Close();

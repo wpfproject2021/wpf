@@ -21,11 +21,14 @@
                 <Image/>
             </Border>
 
-
-
-
-
-            <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            
+                    <ScrollViewer Grid.Row="1">
                 <ItemsControl ItemsSource="{Binding books}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -34,8 +37,10 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Margin="20,20" Text="{Binding name}"/>
-                                <TextBlock Grid.Column="1" Margin="20,20" Text="{Binding writer}"/>
+                                <TextBlock Grid.Column="0" Margin="10,20,20,20" Text="Name:" FontSize="20"  />
+                                <TextBlock Grid.Column="0" Margin="80,20,20,20" Text="{Binding name}"/>
+                                <TextBlock Grid.Column="1" Margin="10,20,20,20" Text="Writer:" FontSize="20"/>
+                                <TextBlock Grid.Column="1" Margin="80,20,20,20" Text="{Binding writer}"/>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

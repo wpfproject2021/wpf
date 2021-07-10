@@ -69,5 +69,23 @@ namespace WpfApp
             settleem f = new settleem();
             f.Show();
         }
+
+        private void showemployee_Click(object sender, RoutedEventArgs e)
+        {
+            showEmployee n =new showEmployee();
+            n.Show();
+        }
+
+        private void showbalance_Click(object sender, RoutedEventArgs e)
+        {
+            showbalance a = new showbalance();
+            a.Show();
+        }
+
+        private void login_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.Show();
+        }
     }
 }

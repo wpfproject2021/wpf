@@ -120,7 +120,7 @@
             <StackPanel Orientation="Horizontal" Grid.Row="2">
                 <Button x:Name="showemployee" Width="100" Height="40" 
                         Content="SHOW" Margin="500,100,0,0"
-                       Foreground="White"  >
+                       Foreground="White" Click="showemployee_Click"  >
                     <Button.Background>
                         <ImageBrush ImageSource="button.png"/>
                     </Button.Background>
@@ -150,7 +150,7 @@
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <Button x:Name="showbalance" Width="100" Height="40" 
                         Content="SHOW" Margin="200,0,0,-80"
-                       Foreground="White" >
+                       Foreground="White" Click="showbalance_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="button.png"/>
                     </Button.Background>
@@ -161,6 +161,17 @@
                 <Button x:Name="incrementbalance" Width="100" Height="40" 
                         Content="INCREMENT" Margin="500,0,0,-80"
                        Foreground="White" Click="incrementbalance_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="button.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <Button x:Name="login" Width="100" Height="40" 
+                        Content="Login" Margin="20,0,0,-80"
+                       Foreground="White" Click="login_Click"  >
                     <Button.Background>
                         <ImageBrush ImageSource="button.png"/>
                     </Button.Background>

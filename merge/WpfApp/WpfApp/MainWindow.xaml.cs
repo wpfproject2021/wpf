@@ -65,33 +65,41 @@ namespace WpfApp
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            
+
             if (username.Text == "admin@yahoo.com" && password.Password == "AdminLib123")
             {
                 Admin v = new Admin();
                 v.Show();
-            }
-
-            //saves the status of the user
-            string stat = status.Text;
-            //first checks if the password and username are in valid format
-            string userName = username.Text;
-            string pass = password.Password;
-
-            valid(userName, pass);
-            //checks if the user exists
-            bool exists = user_Exists(userName, pass);
-            //checks the type of user: Admin, employee or member
-            if (exists)
-            {
+                this.Close();
                 
-                if (stat.ToLower() == "member")
+            }
+            else
+            {
+
+                //saves the status of the user
+                string stat = status.Text;
+                //first checks if the password and username are in valid format
+                string userName = username.Text;
+                string pass = password.Password;
+
+                valid(userName, pass);
+                //checks if the user exists
+                bool exists = user_Exists(userName, pass);
+                //checks the type of user: Admin, employee or member
+                if (exists == true)
                 {
-                    //go to member
-                }
-                else
-                {
+
+                    if (stat == "Memeber")
+                    {
+                        //go to member
+                        Member a = new Member(username.Text);
+                        a.Show();
+                        this.Close();
+                    }
+                    // else
+                    // {
                     //go to employees' page
+                    // }
                 }
             }
 

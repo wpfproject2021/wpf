@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Desktop\New folder (3)\wpf\merge\WpfApp\WpfApp\obj\Debug\
+C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\
 WpfApp
 none
 false
 DEBUG;TRACE
-C:\Users\user\Desktop\New folder (3)\wpf\merge\WpfApp\WpfApp\App.xaml
-11165004435
+C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\App.xaml
+19-503863828
 
-14-334193999
+22-1142181309
 13-1505183044
-addB.xaml;AddEmployee.xaml;Admin.xaml;balanceA.xaml;Button.xaml;delemp.xaml;delete.xaml;MainWindow.xaml;register.xaml;settleem.xaml;showbook.xaml;
+addB.xaml;AddEmployee.xaml;Admin.xaml;balanceA.xaml;booksmem.xaml;borrowbook.xaml;Button.xaml;delemp.xaml;delete.xaml;MainWindow.xaml;Member.xaml;register.xaml;remain.xaml;return22.xaml;returnbook1.xaml;settleem.xaml;showbalance.xaml;showbook.xaml;showEmployee.xaml;
 
 False
 

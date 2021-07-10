@@ -67,20 +67,47 @@
     <Compile Include="balanceA.xaml.cs">
       <DependentUpon>balanceA.xaml</DependentUpon>
     </Compile>
+    <Compile Include="balancemem.xaml.cs">
+      <DependentUpon>balancemem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="booksmem.xaml.cs">
+      <DependentUpon>booksmem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="borrowbook.xaml.cs">
+      <DependentUpon>borrowbook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="delemp.xaml.cs">
       <DependentUpon>delemp.xaml</DependentUpon>
     </Compile>
     <Compile Include="delete.xaml.cs">
       <DependentUpon>delete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Member.xaml.cs">
+      <DependentUpon>Member.xaml</DependentUpon>
+    </Compile>
     <Compile Include="register.xaml.cs">
       <DependentUpon>register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="remain.xaml.cs">
+      <DependentUpon>remain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="return22.xaml.cs">
+      <DependentUpon>return22.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="returnbook1.xaml.cs">
+      <DependentUpon>returnbook1.xaml</DependentUpon>
     </Compile>
     <Compile Include="settleem.xaml.cs">
       <DependentUpon>settleem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="showbalance.xaml.cs">
+      <DependentUpon>showbalance.xaml</DependentUpon>
+    </Compile>
     <Compile Include="showbook.xaml.cs">
       <DependentUpon>showbook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showEmployee.xaml.cs">
+      <DependentUpon>showEmployee.xaml</DependentUpon>
     </Compile>
     <Page Include="addB.xaml">
       <SubType>Designer</SubType>
@@ -95,6 +122,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="balanceA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="balancemem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="booksmem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="borrowbook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,7 +161,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Member.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="remain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="return22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="returnbook1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,7 +185,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="showbalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="showbook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,6 +259,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="increase-icon-png-19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bookim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="e.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

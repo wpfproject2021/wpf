@@ -80,6 +80,7 @@ namespace WpfApp
                 //creating an instance of the member class
                 member m = new member(first, last, user, passOne, path, phone);
                 MessageBox.Show("Successfully Signed Up!");
+                
             }
         }
 
@@ -140,8 +141,9 @@ namespace WpfApp
             con.Open();
             string command;
             double f = 0;
+            DateTime d = DateTime.Now;
             command = "insert into member values('" + _firstName + "', '" + _lastName + "', '" + _userName.Trim() + "', " +
-                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','"+ f+"')";
+                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','" + f + "','"+d+"')";
             SqlCommand com = new SqlCommand(command, con);
             com.ExecuteNonQuery();
             con.Close();

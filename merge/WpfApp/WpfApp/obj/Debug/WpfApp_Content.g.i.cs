@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("increase-icon-png-19.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e.jpg")]
 
 
