@@ -31,7 +31,7 @@ namespace WpfApp
             InitializeComponent();
             books = new List<Book>();
             ///
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
             string command;
             command = "select * from book";
@@ -53,6 +53,12 @@ namespace WpfApp
         private void btn_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ShowBalance_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
     public class Book

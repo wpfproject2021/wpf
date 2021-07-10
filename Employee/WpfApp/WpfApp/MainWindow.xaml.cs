@@ -100,8 +100,7 @@ namespace WpfApp
             {
                 //go to employees' page
                 Employee emp = new Employee(userName, pass);
-                //emp.Show();
-                this.Content = emp;
+                emp.Show();
             }
         }
 
@@ -120,7 +119,7 @@ namespace WpfApp
             bool exists = false;
 
             SqlConnection c = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             //SqlConnection c =
             //    new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             c.Open();
@@ -159,7 +158,7 @@ namespace WpfApp
             bool exists = false;
 
             SqlConnection c = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\AP\wpf-project\WPF\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             c.Open();
             string command;
             command = "select * from EmployeeInfo";

@@ -1,54 +1,26 @@
-﻿<Page x:Class="WpfApp.Employee"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:WpfApp"
-      xmlns:viewmodels="clr-namespace:WpfApp.ViewModels"
-      xmlns:views="clr-namespace:WpfApp.Views"
-      mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="900"
-      Title="Employee"
-      Background="Transparent">
+﻿<Window x:Class="WpfApp.Employee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="Employee" Height="700" Width="900"
+        MouseDown="Employee_OnMouseDown"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
 
-    <Page.Resources>
+    <Window.Resources>
         <!--why doesn't it work?-->
         <!--This is to style the close button and remove the borders-->
         <Style x:Key="btnClose" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
         </Style>
-        <DataTemplate x:Name="EditInfo" DataType="{x:Type viewmodels:EditViewModel}">
-            <views:EditInfo DataContext="{Binding}"></views:EditInfo>
-        </DataTemplate>
-        <DataTemplate x:Name="BalanceEmp" DataType="{x:Type viewmodels:BalanceViewModel}">
-            <views:Balance DataContext="{Binding}"></views:Balance>
-        </DataTemplate>
-        <DataTemplate x:Name="BookList" DataType="{x:Type viewmodels:BookListViewModel}">
-            <views:BookListView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="available" DataType="{x:Type viewmodels:AvailableViewModel}">
-            <views:AvailableView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="Borrowed" DataType="{x:Type viewmodels:BorrowedViewModel}">
-            <views:BorrowedView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="memList" DataType="{x:Type viewmodels:MemberListViewModel}">
-            <views:MemberListView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="delayedR" DataType="{x:Type viewmodels:DelayedReturnsViewModel}">
-            <views:DelayedReturnView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="delayedP" DataType="{x:Type viewmodels:DelayedPayViewModel}">
-            <views:DelayedPayView DataContext="{Binding}"/>
-        </DataTemplate>
-        <DataTemplate x:Name="memStatus" DataType="{x:Type viewmodels:MemberStatViewModel}">
-            <views:MemberStatView DataContext="{Binding}"/>
-        </DataTemplate>
-    </Page.Resources>
-
+    </Window.Resources>
+    
     <Grid>
-        <Frame x:Name="employee" NavigationUIVisibility="Hidden"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -85,10 +57,12 @@
 
             <!--picture-->
             <StackPanel VerticalAlignment="Center" Grid.ColumnSpan="2">
-                <Image Source="participant.png" Width="80" Margin="150,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Image Source="participant.png" Width="80" Margin="150,0" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock Text="Employee Access" FontWeight="Light"
                          FontFamily="helvetica" FontSize="30"
-                         Foreground="White" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                         Foreground="White" HorizontalAlignment="Center" 
+                         Margin="0,10,0,0"/>
             </StackPanel>
 
             <!--buttons-->
@@ -122,8 +96,6 @@
                         />
             </StackPanel>
 
-            <ContentControl Grid.Row="1" Grid.ColumnSpan="2" Content="{Binding}">
-            </ContentControl>
         </Grid>
     </Grid>
-</Page>
+</Window>

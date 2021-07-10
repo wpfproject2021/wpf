@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\AP\wpf-project\WPF\Employee\WpfApp\WpfApp\obj\Debug\
+C:\Users\PC\Desktop\Employee\WpfApp\WpfApp\obj\Debug\
 WpfApp
 none
 false
 DEBUG;TRACE
-D:\AP\wpf-project\WPF\Employee\WpfApp\WpfApp\App.xaml
-21-285514748
+C:\Users\PC\Desktop\Employee\WpfApp\WpfApp\App.xaml
+19-807785384
 
-33-539786036
+22693568003
 13-1505183044
-addB.xaml;AddEmployee.xaml;Admin.xaml;balanceA.xaml;Button.xaml;delemp.xaml;delete.xaml;Employee.xaml;MainWindow.xaml;register.xaml;settleem.xaml;showbook.xaml;Views\AvailableView.xaml;Views\Balance.xaml;Views\BookListView.xaml;Views\BorrowedView.xaml;Views\DelayedPayView.xaml;Views\DelayedReturnView.xaml;Views\EditInfo.xaml;Views\MemberListView.xaml;Views\MemberStatView.xaml;
+addB.xaml;AddEmployee.xaml;Admin.xaml;balanceA.xaml;Borrowed.xaml;Button.xaml;DelayedPay.xaml;DelayedReturn.xaml;delemp.xaml;delete.xaml;EditEmployeeInfo.xaml;Employee.xaml;MainWindow.xaml;MemberList.xaml;register.xaml;settleem.xaml;ShowAvailableBooks.xaml;ShowBalance.xaml;showbook.xaml;
 
 False
 

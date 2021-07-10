@@ -117,12 +117,13 @@ namespace WpfApp
     //a class for library members that is connected to sql
     public class member
     {
-        string _firstName;
-        string _lastName;
-        string _userName;
-        string _password;
-        string _phone;
-        ImageSource _photoPath;
+        public string _firstName { get; set; }
+        public string _lastName { get; set; }
+        public string _userName { get; set; }
+        public string _password { get; set; }
+        public string _phone { get; set; }
+        public ImageSource _photoPath { get; set; }
+        DateTime _membershipDate { get; set; }
 
         public member(string firstName, string lastName, string username,
                         string pass, ImageSource path, string phoneNum)
@@ -133,6 +134,7 @@ namespace WpfApp
             this._password = pass;
             this._photoPath = path;
             this._phone = phoneNum;
+            _membershipDate = DateTime.Now;
 
             SqlConnection con = new SqlConnection(
                 @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
@@ -141,7 +143,7 @@ namespace WpfApp
             string command;
             double f = 0;
             command = "insert into member values('" + _firstName + "', '" + _lastName + "', '" + _userName.Trim() + "', " +
-                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','"+ f+"')";
+                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','"+ f+"', '"+_membershipDate+"')";
             SqlCommand com = new SqlCommand(command, con);
             com.ExecuteNonQuery();
             con.Close();

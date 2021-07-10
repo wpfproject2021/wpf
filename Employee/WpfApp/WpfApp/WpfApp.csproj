@@ -67,14 +67,29 @@
     <Compile Include="balanceA.xaml.cs">
       <DependentUpon>balanceA.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Borrowed.xaml.cs">
+      <DependentUpon>Borrowed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelayedPay.xaml.cs">
+      <DependentUpon>DelayedPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelayedReturn.xaml.cs">
+      <DependentUpon>DelayedReturn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="delemp.xaml.cs">
       <DependentUpon>delemp.xaml</DependentUpon>
     </Compile>
     <Compile Include="delete.xaml.cs">
       <DependentUpon>delete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditEmployeeInfo.xaml.cs">
+      <DependentUpon>EditEmployeeInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList.xaml.cs">
+      <DependentUpon>MemberList.xaml</DependentUpon>
     </Compile>
     <Compile Include="register.xaml.cs">
       <DependentUpon>register.xaml</DependentUpon>
@@ -82,44 +97,14 @@
     <Compile Include="settleem.xaml.cs">
       <DependentUpon>settleem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowAvailableBooks.xaml.cs">
+      <DependentUpon>ShowAvailableBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowBalance.xaml.cs">
+      <DependentUpon>ShowBalance.xaml</DependentUpon>
+    </Compile>
     <Compile Include="showbook.xaml.cs">
       <DependentUpon>showbook.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\AvailableViewModel.cs" />
-    <Compile Include="ViewModels\BalanceViewModel.cs" />
-    <Compile Include="ViewModels\BookListViewModel.cs" />
-    <Compile Include="ViewModels\BorrowedViewModel.cs" />
-    <Compile Include="ViewModels\DelayedPayViewModel.cs" />
-    <Compile Include="ViewModels\DelayedReturnsViewModel.cs" />
-    <Compile Include="ViewModels\EditViewModel.cs" />
-    <Compile Include="ViewModels\MemberListViewModel.cs" />
-    <Compile Include="ViewModels\MemberStatViewModel.cs" />
-    <Compile Include="Views\AvailableView.xaml.cs">
-      <DependentUpon>AvailableView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Balance.xaml.cs">
-      <DependentUpon>Balance.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BookListView.xaml.cs">
-      <DependentUpon>BookListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BorrowedView.xaml.cs">
-      <DependentUpon>BorrowedView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DelayedPayView.xaml.cs">
-      <DependentUpon>DelayedPayView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DelayedReturnView.xaml.cs">
-      <DependentUpon>DelayedReturnView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EditInfo.xaml.cs">
-      <DependentUpon>EditInfo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MemberListView.xaml.cs">
-      <DependentUpon>MemberListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MemberStatView.xaml.cs">
-      <DependentUpon>MemberStatView.xaml</DependentUpon>
     </Compile>
     <Page Include="addB.xaml">
       <SubType>Designer</SubType>
@@ -137,7 +122,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Borrowed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelayedPay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelayedReturn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="delete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditEmployeeInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +166,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MemberList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,43 +178,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShowAvailableBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="showbook.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\AvailableView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Balance.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BookListView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BorrowedView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DelayedPayView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DelayedReturnView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\EditInfo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MemberListView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MemberStatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -280,7 +257,7 @@
     <Resource Include="participant.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Resource Include="employee%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
