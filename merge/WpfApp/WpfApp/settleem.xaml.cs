@@ -122,18 +122,20 @@ namespace WpfApp
                             con2.Close();
 
                             //
-
-                            SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
-                            con3.Open();
-                            string command3 = "";
                             for (int i = 0; i < w.Count; i++)
                             {
+                                SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                                con3.Open();
+                                string command3 = "";
+
+                                MessageBox.Show(w[i].ToString());
                                 double d = w[i] + y;
                                 command3 = "update EmployeeInfo SET balance='" + d + "' where balance='" + w[i] + "'";
+
+                                SqlCommand com3 = new SqlCommand(command3, con3);
+                                com3.ExecuteNonQuery();
+                                con3.Close();
                             }
-                            SqlCommand com3 = new SqlCommand(command3, con3);
-                            com3.ExecuteNonQuery();
-                            con3.Close();
 
                         }
                     }

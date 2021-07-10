@@ -68,3 +68,5 @@ C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\return
 C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\return22.baml
 C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\remain.g.cs
 C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\remain.baml
+C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\balancemem.g.cs
+C:\Users\user\Desktop\FatemehUni\projectWPF\merge\WpfApp\WpfApp\obj\Debug\balancemem.baml

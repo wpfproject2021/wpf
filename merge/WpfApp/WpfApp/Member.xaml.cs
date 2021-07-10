@@ -91,7 +91,7 @@ namespace WpfApp
 
         private void balanceme_Click(object sender, RoutedEventArgs e)
         {
-            balancemem n = new balancemem();
+            balancemem n = new balancemem(email);
             n.Show();
         }
     }

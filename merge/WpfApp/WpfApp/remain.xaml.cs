@@ -25,11 +25,13 @@ namespace WpfApp
     /// </summary>
     public partial class remain : Window
     {
+        List<string> a = new List<string>();
         public string email;
         bool f = false;
         public remain(string email)
         {
             InitializeComponent();
+            a.Add(email);
             this.email = email;
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
 
@@ -93,11 +95,11 @@ namespace WpfApp
                     if (data.Rows[i][2].ToString() == email)
                     {
                         //MessageBox.Show((data.Rows[i][6].ToString()));
-                        double f = Convert.ToDouble(data.Rows[i][6].ToString());
+                        float f = float.Parse(data.Rows[i][6].ToString());
 
                         if (f > 10)
                         {
-                            upbalance(email, f);
+                            upbalance(f);
                             MessageBox.Show("tamdid shod");
                         }
                         else
@@ -112,18 +114,21 @@ namespace WpfApp
             }
         }
 
-        public void upbalance(string email, double ba)
+        public void upbalance(float ba)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            string command;
-            double g = ba - 10;
-            DateTime v = DateTime.Now;
-            command = "Update member SET balance='" + g + "',datem='"+ v +"', where balance='" + ba + "'";
-            SqlCommand com = new SqlCommand(command, con);           
-            
-            com.BeginExecuteNonQuery();
-            con.Close();
+            for (int i = 0; i < a.Count; i++)
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                con.Open();
+                string command;
+                float g = ba - 10;
+                DateTime v = DateTime.Now;
+                command = "Update member SET balance='" + g + "', datem='"+ v +"' where email='" + email.Trim() + "'";
+                SqlCommand com = new SqlCommand(command, con);
+
+                com.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }
