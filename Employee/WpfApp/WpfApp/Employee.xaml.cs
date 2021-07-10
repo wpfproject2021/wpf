@@ -83,9 +83,5 @@ namespace WpfApp
             dP.Show();
         }
 
-        private void Member_status(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
