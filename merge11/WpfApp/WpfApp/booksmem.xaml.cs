@@ -37,7 +37,7 @@ namespace WpfApp
             //MessageBox.Show(email);
             books = new ObservableCollection<Book>();
             ///
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
             string command;
             command = "select * from book";

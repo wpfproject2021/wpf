@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ShowEmployeeBalance" Height="700" Width="900"
         MouseDown="ShowBalance_OnMouseDown"
-        ResizeMode="NoResize"
+        ResizeMode="NoResize" WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     
     <Window.Resources>

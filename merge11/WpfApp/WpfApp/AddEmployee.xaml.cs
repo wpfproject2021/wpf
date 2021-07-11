@@ -99,7 +99,7 @@ namespace WpfApp
                     Image p = picture;
                     
                    // MessageBox.Show(x);
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
                     con.Open();
                     string command;
                     command = "insert into EmployeeInfo values('" +email.Trim() + "','" + name.Trim() + "','" + lastname.Trim() + "','" + password.Trim() + "','" + phone.Trim() + "','" +balance + "','" + p.Source + "')";

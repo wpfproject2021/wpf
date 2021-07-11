@@ -43,7 +43,7 @@ namespace WpfApp
             else
             {
                 List<info> a = new List<info>();
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
                 con.Open();
                 string command;
                 command = "select * from EmployeeInfo";
@@ -65,7 +65,7 @@ namespace WpfApp
                     if (nameemployee3.Text == a[i].name && familyemployee3.Text==a[i].family)
                     {
                         k = true;
-                        SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                        SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
                         con1.Open();
                         string command1;
 

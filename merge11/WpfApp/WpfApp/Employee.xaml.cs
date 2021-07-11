@@ -87,6 +87,7 @@ namespace WpfApp
         {
             MainWindow m = new MainWindow();
             m.Show();
+            this.Close();
         }
     }
 }

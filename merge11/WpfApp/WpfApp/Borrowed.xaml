@@ -38,25 +38,44 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
-                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
                             <!--change the margins later-->
                             <TextBlock Grid.Column="0" Margin="20,20" 
-                                           Text="{Binding id}"
-                                           FontFamily="Helvetica" FontSize="18" 
-                                           Foreground="#FFFBFBFB"/>
+                                           Text="Email"
+                                           FontFamily="Helvetica" FontSize="18"
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="0" FontWeight="Bold"/>
                             <TextBlock Grid.Column="1" Margin="20,20" 
+                                           Text="Book Name"
+                                           FontFamily="Helvetica" FontSize="18"
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="0" FontWeight="Bold"/>
+                            <TextBlock Grid.Column="2" Margin="20,20" 
+                                           Text="Borrowed Date"
+                                           FontFamily="Helvetica" FontSize="18"
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="0" FontWeight="Bold"/>
+
+
+                            <TextBlock Grid.Column="0" Margin="20,20" 
                                            Text="{Binding email}"
                                            FontFamily="Helvetica" FontSize="18"
-                                           Foreground="#FFFBFBFB"/>
-                            <TextBlock Grid.Column="2" Margin="20,20" 
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="1"/>
+                            <TextBlock Grid.Column="1" Margin="20,20" 
                                            Text="{Binding bookName}"
                                            FontFamily="Helvetica" FontSize="18"
-                                           Foreground="#FFFBFBFB"/>
-                            <TextBlock Grid.Column="3" Margin="20,20" 
+                                           Foreground="#FFFBFBFB"
+                                       Grid.Row="1"/>
+                            <TextBlock Grid.Column="2" Margin="20,20" 
                                            Text="{Binding date}"
                                            FontFamily="Helvetica" FontSize="18"
-                                           Foreground="#FFFBFBFB"/>
+                                           Foreground="#FFFBFBFB"
+                                       Grid.Row="1"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

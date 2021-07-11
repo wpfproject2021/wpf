@@ -35,7 +35,7 @@ namespace WpfApp
         public EmployeeInfo Search_Employee(string email, string pass)
         {
             SqlConnection c = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             c.Open();
             string command;
             command = "select * from EmployeeInfo";

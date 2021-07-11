@@ -48,7 +48,7 @@ namespace WpfApp
                 int num = 1;
                 bool borrow = false;
                 Book book = new Book(name, writer, num, borrow);
-                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
                 con2.Open();
                 string command2;
                 command2 = "insert into book values('" + name.Trim() + "','" + writer.Trim() + "','" + num + "','" + borrow + "')";
