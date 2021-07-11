@@ -76,14 +76,32 @@
     <Compile Include="borrowbook.xaml.cs">
       <DependentUpon>borrowbook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Borrowed.xaml.cs">
+      <DependentUpon>Borrowed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelayedPay.xaml.cs">
+      <DependentUpon>DelayedPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelayedReturn.xaml.cs">
+      <DependentUpon>DelayedReturn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="delemp.xaml.cs">
       <DependentUpon>delemp.xaml</DependentUpon>
     </Compile>
     <Compile Include="delete.xaml.cs">
       <DependentUpon>delete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditEmployeeInfo.xaml.cs">
+      <DependentUpon>EditEmployeeInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Member.xaml.cs">
       <DependentUpon>Member.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList.xaml.cs">
+      <DependentUpon>MemberList.xaml</DependentUpon>
     </Compile>
     <Compile Include="register.xaml.cs">
       <DependentUpon>register.xaml</DependentUpon>
@@ -100,6 +118,9 @@
     <Compile Include="settleem.xaml.cs">
       <DependentUpon>settleem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowAvailableBooks.xaml.cs">
+      <DependentUpon>ShowAvailableBooks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="showbalance.xaml.cs">
       <DependentUpon>showbalance.xaml</DependentUpon>
     </Compile>
@@ -108,6 +129,9 @@
     </Compile>
     <Compile Include="showEmployee.xaml.cs">
       <DependentUpon>showEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowEmployeeBalance.xaml.cs">
+      <DependentUpon>ShowEmployeeBalance.xaml</DependentUpon>
     </Compile>
     <Page Include="addB.xaml">
       <SubType>Designer</SubType>
@@ -137,7 +161,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Borrowed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelayedPay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelayedReturn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +182,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="delete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditEmployeeInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,6 +206,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Member.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MemberList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,6 +233,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShowAvailableBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="showbalance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -194,6 +246,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="showEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowEmployeeBalance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -268,6 +324,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="participant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -166,7 +166,8 @@ namespace WpfApp
             SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             con1.Open();
             string command1;
-            bool f1 = false;
+            //compiler warning
+            //bool f1 = false;
             bool f2 = true;
             
             command1 = "update book SET Borrowed='" + f2+ "' where Name='"+name+"'";

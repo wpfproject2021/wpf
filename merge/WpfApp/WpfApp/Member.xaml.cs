@@ -31,7 +31,8 @@ namespace WpfApp
             InitializeComponent();
             string name1="";
             string family1="";
-            Image v=null;
+            //compiler warning
+            //Image v =null;
             this.email = email;
             SqlConnection c =
                 new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");

@@ -121,7 +121,8 @@ namespace WpfApp
             con1.Open();
             string command1;
             bool f1 = false;
-            bool f2 = true;
+            //compiler warning
+            //bool f2 = true;
 
             command1 = "update book SET Borrowed='" + f1 + "' where Name='" + name + "'";
 

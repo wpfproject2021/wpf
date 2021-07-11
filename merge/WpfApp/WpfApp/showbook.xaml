@@ -5,10 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="showbook" Height="450" Width="800"
+        Title="showbook" Height="700" Width="900"
         WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="ShowBalance_OnMouseDown"
         WindowStartupLocation="CenterScreen"
         Background="#bf00ff">
+    <Window.Resources>
+        <!--why doesn't it work?-->
+        <!--This is to style the close button and remove the borders-->
+        <Style x:Key="btnClose" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid>
             <Border CornerRadius="11" Grid.RowSpan="7">
@@ -21,14 +31,7 @@
                 <Image/>
             </Border>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="20*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            
-                    <ScrollViewer Grid.Row="1">
+            <ScrollViewer>
                 <ItemsControl ItemsSource="{Binding books}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -37,31 +40,49 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Margin="10,20,20,20" Text="Name:" FontSize="20"  />
-                                <TextBlock Grid.Column="0" Margin="80,20,20,20" Text="{Binding name}"/>
-                                <TextBlock Grid.Column="1" Margin="10,20,20,20" Text="Writer:" FontSize="20"/>
-                                <TextBlock Grid.Column="1" Margin="80,20,20,20" Text="{Binding writer}"/>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <!--change the margins later-->
+                                <TextBlock Grid.Column="0" Text="Name"
+                                           Margin="20,40,20,20" FontFamily="Helvetica" 
+                                           FontSize="18" Foreground="#FFFBFBFB"
+                                           Grid.Row="0 " FontWeight="Bold"/>
+                                <TextBlock Grid.Column="0" Margin="20,20" 
+                                           Text="{Binding name}"
+                                           FontFamily="Helvetica" FontSize="18" 
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="1"/>
+                                <TextBlock Grid.Column="1" Text="Writer"
+                                           Margin="20,40,20,20" FontFamily="Helvetica" 
+                                           FontSize="18" Foreground="#FFFBFBFB"
+                                           Grid.Row="0" FontWeight="Bold"/>
+                                <TextBlock Grid.Column="1" Margin="20,20" 
+                                           Text="{Binding writer}"
+                                           FontFamily="Helvetica" FontSize="18"
+                                           Foreground="#FFFBFBFB"
+                                           Grid.Row="1"/>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
 
-            <StackPanel Grid.Row="0">
-                <Button Name="btn" Click="btn_Click"                    
-                   
+            <!--exit button-->
+            <Button Name="btn" Click="btn_Click"
+                    Style="{StaticResource btnClose}"
                     Width="40" Height="40" 
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
-                    Margin="150,0,0,0">
-                    <Button.Background>
-                        <ImageBrush x:Name="close" ImageSource="Close.png"/>
-                    </Button.Background>
-                    <Image Source="close.png"  
+                    Margin="0,0,20,0">
+                <Button.Background>
+                    <ImageBrush x:Name="close" ImageSource="Close.png"/>
+                </Button.Background>
+                <Image Source="close.png"  
                     Width="40"
                     Height="40" IsManipulationEnabled="True"/>
-                </Button>
-            </StackPanel>
+            </Button>
 
         </Grid>
     </Grid>

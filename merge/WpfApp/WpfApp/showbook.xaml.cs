@@ -54,6 +54,11 @@ namespace WpfApp
         {
             Close();
         }
+        private void ShowBalance_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
     }
     public class Book
     {

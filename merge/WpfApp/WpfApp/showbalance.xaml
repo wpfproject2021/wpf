@@ -9,6 +9,15 @@
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="#bf00ff">
+    
+    <Window.Resources>
+        <!--This is to style the close button and remove the borders-->
+        <Style x:Key="btnClose" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid>
             <Border CornerRadius="11" Grid.RowSpan="7">
@@ -28,7 +37,6 @@
                 </Grid.RowDefinitions>
             </Grid>
 
-            
                 <ItemsControl ItemsSource="{Binding r}" Grid.Row="1">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -48,7 +56,6 @@
 
             <StackPanel Grid.Row="0">
                 <Button Name="btn" Click="btn_Click"                    
-                   
                     Width="40" Height="40" 
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"

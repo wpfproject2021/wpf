@@ -118,12 +118,13 @@ namespace WpfApp
     //a class for library members that is connected to sql
     public class member
     {
-        string _firstName;
-        string _lastName;
-        string _userName;
-        string _password;
-        string _phone;
-        ImageSource _photoPath;
+        public string _firstName { get; set; }
+        public string _lastName { get; set; }
+        public string _userName { get; set; }
+        public string _password { get; set; }
+        public string _phone { get; set; }
+        public ImageSource _photoPath { get; set; }
+        DateTime _membershipDate { get; set; }
 
         public member(string firstName, string lastName, string username,
                         string pass, ImageSource path, string phoneNum)
@@ -141,9 +142,9 @@ namespace WpfApp
             con.Open();
             string command;
             double f = 0;
-            DateTime d = DateTime.Now;
+            _membershipDate = DateTime.Now;
             command = "insert into member values('" + _firstName + "', '" + _lastName + "', '" + _userName.Trim() + "', " +
-                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','" + f + "','"+d+"')";
+                "'" + _phone.Trim() + "', '" + _password.Trim() + "', '" + _photoPath + "','" + f + "','"+ _membershipDate + "')";
             SqlCommand com = new SqlCommand(command, con);
             com.ExecuteNonQuery();
             con.Close();

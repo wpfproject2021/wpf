@@ -65,42 +65,44 @@ namespace WpfApp
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
+            //saves the status of the user
+            string stat = status.Text;
+            //first checks if the password and username are in valid format
+            string userName = username.Text;
+            string pass = password.Password;
+            bool memberExists = false;
+            bool empExists = false;
+            //checks if the email and pass are in correct format
+            valid(userName, pass);
 
             if (username.Text == "admin@yahoo.com" && password.Password == "AdminLib123")
             {
                 Admin v = new Admin();
                 v.Show();
-                this.Close();
-                
+                //why is this here?
+                //this.Close();
             }
-            else
+            if (stat.ToLower() == "member")
             {
+                //checks if the member exists
+                memberExists = user_Exists(userName, pass);
+            }
+            if (stat.ToLower() == "employee")
+            {
+                //checks if the employee exits
+                empExists = Emp_Exists(userName, pass);
+            }
 
-                //saves the status of the user
-                string stat = status.Text;
-                //first checks if the password and username are in valid format
-                string userName = username.Text;
-                string pass = password.Password;
-
-                valid(userName, pass);
-                //checks if the user exists
-                bool exists = user_Exists(userName, pass);
-                //checks the type of user: Admin, employee or member
-                if (exists == true)
-                {
-
-                    if (stat == "Memeber")
-                    {
-                        //go to member
-                        Member a = new Member(username.Text);
-                        a.Show();
-                        this.Close();
-                    }
-                    // else
-                    // {
-                    //go to employees' page
-                    // }
-                }
+            //if the member or the employee exists go to the assigned pages
+            if (memberExists)
+            {
+                //go to member
+            }
+            if (empExists)
+            {
+                //go to employees' page
+                Employee emp = new Employee(userName, pass);
+                emp.Show();
             }
 
         }
@@ -131,6 +133,43 @@ namespace WpfApp
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 if ((string)data.Rows[i][2] == username && (string)data.Rows[i][4] == pass)
+                {
+                    exists = true;
+                }
+            }
+            SqlCommand cmd = new SqlCommand(command, c);
+            cmd.BeginExecuteNonQuery();
+            c.Close();
+
+            //check the value of exist variable
+            if (exists)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong Email Or Password!");
+                return false;
+            }
+        }
+
+        //searches for employee in database
+        public bool Emp_Exists(string username, string pass)
+        {
+            bool exists = false;
+
+            SqlConnection c = new SqlConnection(
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+            c.Open();
+            string command;
+            command = "select * from EmployeeInfo";
+            SqlDataAdapter adapter = new SqlDataAdapter(command, c);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                if ((string)data.Rows[i][0] == username && (string)data.Rows[i][3] == pass)
                 {
                     exists = true;
                 }
