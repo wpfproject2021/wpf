@@ -94,6 +94,9 @@
     <Compile Include="EditEmployeeInfo.xaml.cs">
       <DependentUpon>EditEmployeeInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="editmember.xaml.cs">
+      <DependentUpon>editmember.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
     </Compile>
@@ -186,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditEmployeeInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="editmember.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="participant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

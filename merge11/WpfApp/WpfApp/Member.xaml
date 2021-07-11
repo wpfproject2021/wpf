@@ -97,7 +97,7 @@
                 </Button>
             </StackPanel>
 
-           
+
 
             <StackPanel Orientation="Horizontal" Grid.Row="2">
                 <Button x:Name="remaine" Width="100" Height="40" 
@@ -109,7 +109,7 @@
                 </Button>
             </StackPanel>
 
-           
+
 
             <StackPanel Orientation="Horizontal" Grid.Row="2">
                 <Button x:Name="balanceme" Width="100" Height="40" 
@@ -121,14 +121,14 @@
                 </Button>
             </StackPanel>
 
-            
+
 
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <Button x:Name="editMem" Width="100" Height="40" 
-                        Content="Edit" Margin="350,0,0,-80"
-                       Foreground="White"  >
-                    
-                        <Button.Background>
+                        Content="Edit" Margin="350,95,0,0"
+                       Foreground="White" VerticalAlignment="Top" Click="editMem_Click"  >
+
+                    <Button.Background>
                         <ImageBrush ImageSource="button.png"/>
                     </Button.Background>
                 </Button>

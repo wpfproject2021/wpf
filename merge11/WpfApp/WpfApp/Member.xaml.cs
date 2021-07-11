@@ -95,5 +95,12 @@ namespace WpfApp
             balancemem n = new balancemem(email);
             n.Show();
         }
+
+        private void editMem_Click(object sender, RoutedEventArgs e)
+        {
+            editmember b = new editmember(email);
+            b.Show();
+            this.Close();
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace WpfApp
             con.Close();
 
             DataContext = this;
+            
         }
 
         private void Borrowed_OnMouseDown(object sender, MouseButtonEventArgs e)

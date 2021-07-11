@@ -100,6 +100,7 @@ namespace WpfApp
             {
                 Member v = new Member(username.Text);
                 v.Show();
+                this.Close();
             }
             if (empExists)
             {
