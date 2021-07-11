@@ -79,11 +79,13 @@ namespace WpfApp
             {
                 Admin v = new Admin();
                 v.Show();
+                this.Close();
                 //why is this here?
                 //this.Close();
             }
-            if (stat.ToLower() == "member")
+            if (stat == "Memeber")
             {
+                
                 //checks if the member exists
                 memberExists = user_Exists(userName, pass);
             }
@@ -96,7 +98,8 @@ namespace WpfApp
             //if the member or the employee exists go to the assigned pages
             if (memberExists)
             {
-                //go to member
+                Member v = new Member(username.Text);
+                v.Show();
             }
             if (empExists)
             {
@@ -159,7 +162,7 @@ namespace WpfApp
             bool exists = false;
 
             SqlConnection c = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             c.Open();
             string command;
             command = "select * from EmployeeInfo";
@@ -175,7 +178,7 @@ namespace WpfApp
                 }
             }
             SqlCommand cmd = new SqlCommand(command, c);
-            cmd.BeginExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             c.Close();
 
             //check the value of exist variable

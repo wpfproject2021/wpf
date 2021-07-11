@@ -24,7 +24,7 @@ namespace WpfApp
             InitializeComponent();
             BorrowedItems = new List<BorrowedBooks>();
             SqlConnection con = new SqlConnection(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
+                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Desktop\db\members.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
             string command;
             command = "select * from bookList1";

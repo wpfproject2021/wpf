@@ -57,7 +57,7 @@ namespace WpfApp
             if (!match.Success)
             {
                 MessageBox.Show("Email format is incorrect");
-                return true;
+                return false;
             }
             else
             {
