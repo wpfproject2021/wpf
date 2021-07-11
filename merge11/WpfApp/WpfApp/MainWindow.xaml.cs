@@ -107,6 +107,7 @@ namespace WpfApp
                 //go to employees' page
                 Employee emp = new Employee(userName, pass);
                 emp.Show();
+                this.Close();
             }
 
         }

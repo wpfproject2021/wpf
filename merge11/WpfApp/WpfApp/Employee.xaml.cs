@@ -83,5 +83,10 @@ namespace WpfApp
             dP.Show();
         }
 
+        private void login_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            m.Show();
+        }
     }
 }

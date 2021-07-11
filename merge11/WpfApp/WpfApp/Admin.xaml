@@ -7,9 +7,16 @@
         mc:Ignorable="d"
         Title="Admin"  WindowStyle="None" Height="600" Width="800"
         WindowStartupLocation="CenterScreen"
-        Background="#bf00ff"
-        
-        >
+        Background="#bf00ff">
+
+    <Window.Resources>
+        <!--why doesn't it work?-->
+        <!--This is to style the close button and remove the borders-->
+        <Style x:Key="btnClose" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
 
     <Grid>
         <Grid>
@@ -31,7 +38,6 @@
 
             <StackPanel Grid.Row="0">
                 <Button Name="btn" Click="btn_Click"                    
-                   
                     Width="40" Height="40" 
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
@@ -45,11 +51,12 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="0">
-                <Image x:Name="image" Source="admin.png" 
-                         Width="80" Margin="0,-100,0,-200"/>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" Height="152" Margin="0,0,0,129" Grid.RowSpan="2">
+                <Image x:Name="image" Source="businesswoman.png" 
+                         Width="80" Height="80"
+                         Margin="0,-100,0,-200"/>
                 <TextBlock x:Name="title" Text="Admin"
-                         FontFamily="helvetica" FontSize="30"
+                         FontFamily="helvetica" FontSize="40"
                          Foreground="White" HorizontalAlignment="Center" Margin="0,100,0,-10"/>
             </StackPanel>
 
@@ -149,7 +156,7 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <Button x:Name="showbalance" Width="100" Height="40" 
-                        Content="SHOW" Margin="200,0,0,-80"
+                        Content="SHOW" Margin="250,0,0,-80"
                        Foreground="White" Click="showbalance_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="button.png"/>
@@ -159,7 +166,7 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <Button x:Name="incrementbalance" Width="100" Height="40" 
-                        Content="INCREMENT" Margin="500,0,0,-80"
+                        Content="INCREMENT" Margin="450,0,0,-80"
                        Foreground="White" Click="incrementbalance_Click" >
                     <Button.Background>
                         <ImageBrush ImageSource="button.png"/>

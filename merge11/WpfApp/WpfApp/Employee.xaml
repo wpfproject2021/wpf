@@ -75,7 +75,7 @@
                 <Button x:Name="bookList" Width="120" Height="60" 
                         Content="Book List" Margin="60,40,0,0" Click="Book_List"/>
                 <Button x:Name="avlbBooks" Width="120" Height="60" 
-                        Content="Available Books" Margin="50,40,0,0" Click="Available"/>
+                        Content="Available Books" Margin="60,40,0,0" Click="Available"/>
                 <Button x:Name="borrowed" Width="120" Height="60" 
                         Content="Borrowed Books" Margin="50,40,0,0" Click="Borrowed"/>
             </StackPanel>
@@ -91,6 +91,9 @@
                 <Button x:Name="delayedPayment" Width="120" Height="60" 
                         Content="Delayed Payment" Margin="50,40,0,0" Click="Delayed_Pay"
                         />
+                <Button x:Name="login" Width="120" Height="60" 
+                        Content="LOGIN"
+                        Click="login_Click" Margin="50,40,0,0"/>
             </StackPanel>
 
         </Grid>
